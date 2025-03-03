@@ -27,6 +27,8 @@ $offers = $travelOfferController->getOffers();
             --primary-color: #4CAF50;
             --danger-color: #f44336;
             --hover-color: #f1f1f1;
+            --add-button-color: #2196F3;
+            --add-button-hover: #1976D2;
         }
 
         body {
@@ -103,6 +105,24 @@ $offers = $travelOfferController->getOffers();
             background-color: rgb(111, 25, 25);
         }
 
+        .btn-add {
+            background-color: var(--add-button-color);
+            margin-top: 20px;
+            display: block;
+            width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-add:hover {
+            background-color: var(--add-button-hover);
+        }
+
         form {
             display: inline;
         }
@@ -111,6 +131,10 @@ $offers = $travelOfferController->getOffers();
             th, td {
                 font-size: 14px;
                 padding: 8px;
+            }
+
+            .btn-add {
+                width: 200px;
             }
         }
     </style>
@@ -148,6 +172,9 @@ $offers = $travelOfferController->getOffers();
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <!-- Bouton Ajouter -->
+        <a href="../View/Back Office/addTravelOffer.php" class="btn btn-add">Ajouter une offre</a>
     </div>
 </body>
 </html>
